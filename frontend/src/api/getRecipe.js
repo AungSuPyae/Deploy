@@ -62,7 +62,7 @@ export const sendSearchRequest = async (searchTerm, cuisine, setResult, nutritio
     }
 
     // Gửi request đến API
-    const res = await fetch("https://nutrigen-bot.onrender.com/api/searchRecipe", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/searchRecipe`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(requestData),
@@ -153,7 +153,7 @@ export const getRecipeDetails = async (recipeId) => {
     const recipeIdStr = String(idToUse);
     
     console.log(`🔍 [Frontend] Making API request for recipe ID: ${recipeIdStr}`);
-    const res = await fetch(`https://nutrigen-bot.onrender.com/api/recipe/${recipeIdStr}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/recipe/${recipeIdStr}`, {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
