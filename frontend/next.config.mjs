@@ -30,11 +30,6 @@ const nextConfig = {
     maxInactiveAge: 60 * 60 * 1000,
     pagesBufferLength: 5,
   },
-  experimental: {
-    esmExternals: 'loose',
-    // Add fallback linking for dynamic pages
-    fallbackLinking: true,
-  },
   
   // Add these new configurations
   trailingSlash: true,

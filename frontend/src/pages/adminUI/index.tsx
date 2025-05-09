@@ -63,7 +63,7 @@ const StatCard: React.FC<{
   );
 };
 
-const AdminDashboard = () => {
+const AdminDashboard = ({ serverData }: { serverData: any }) => {
   const [dashboardStats, setDashboardStats] = useState<DashboardStats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -380,9 +380,14 @@ const AdminDashboard = () => {
 
 
 export const getServerSideProps = async (context) => {
+  // Fetch server-side data
+  const serverData = { message: 'Hello from the server!' };
+
   return {
-    props: {}, // Will be passed to the page component as props
-  }
+    props: {
+      serverData,
+    },
+  };
 };
 
 export default AdminDashboard;

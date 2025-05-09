@@ -10,36 +10,12 @@ interface AdminLayoutProps {
 }
 
 const navItems = [
-  { 
-    path: '/adminUI', 
-    label: 'Dashboard', 
-    icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' 
-  },
-  { 
-    path: '/adminUI/UserManagement', 
-    label: 'Users', 
-    icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' 
-  },
-  { 
-    path: '/adminUI/SearchManagement', 
-    label: 'Recipe Search', 
-    icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7' 
-  },
-  { 
-    path: '/adminUI/AssistantChat', 
-    label: 'Support Chat', 
-    icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h-2zm0 6h2v2h-2z' 
-  },
-  { 
-    path: '/adminUI/ChatManagement', 
-    label: 'Chat History', 
-    icon: 'M7 8h6M7 12h4m5 8l-4-4H7a4 4 0 01-4-4V7a4 4 0 014-4h10a4 4 0 014 4v5a4 4 0 01-4 4h-1l-3 3zM16 2v4m0 0l2-2m-2 2l-2-2' 
-  },
-  { 
-    path: '/adminUI/PostsManagement', 
-    label: 'NutriGen Community', 
-    icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' 
-  }
+  { path: '/adminUI', label: 'Dashboard', icon: 'M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' },
+  { path: '/adminUI/UserManagement', label: 'Users', icon: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z' },
+  { path: '/adminUI/SearchManagement', label: 'Recipe Search', icon: 'M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7' },
+  { path: '/adminUI/AssistantChat', label: 'Support Chat', icon: 'M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h-2zm0 6h2v2h-2z' },
+  { path: '/adminUI/ChatManagement', label: 'Chat History', icon: 'M7 8h6M7 12h4m5 8l-4-4H7a4 4 0 01-4-4V7a4 4 0 014-4h10a4 4 0 014 4v5a4 4 0 01-4 4h-1l-3 3zM16 2v4m0 0l2-2m-2 2l-2-2' },
+  { path: '/adminUI/PostsManagement', label: 'NutriGen Community', icon: 'M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z' },
 ];
 
 const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title = 'Admin Dashboard' }) => {
@@ -318,11 +294,5 @@ const AdminLayout: React.FC<AdminLayoutProps> = ({ children, title = 'Admin Dash
   );
 };
 
-
-export const getServerSideProps = async (context) => {
-  return {
-    props: {}, // Will be passed to the page component as props
-  }
-};
-
 export default AdminLayout;
+
