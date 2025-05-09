@@ -30,7 +30,7 @@ const nextConfig = {
     pagesBufferLength: 5,
   },
   trailingSlash: true,
-  output: 'export', // Add this line for static export
+  output: 'export', 
 
   exportPathMap: async function (defaultPathMap, { dev, dir, outDir, distDir, buildId }) {
     const filteredPaths = {};

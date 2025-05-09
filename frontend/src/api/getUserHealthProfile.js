@@ -12,7 +12,7 @@ let nutritionRecommendationsCache = null;
 let lastRecommendationsFetchTime = 0;
 
 // API base URL
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://nutrigen-bot.onrender.com/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
 /**
  * Checks if the nutrition mode is currently enabled
