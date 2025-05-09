@@ -379,15 +379,4 @@ const AdminDashboard = ({ serverData }: { serverData: any }) => {
 };
 
 
-export const getServerSideProps = async (context) => {
-  // Fetch server-side data
-  const serverData = { message: 'Hello from the server!' };
-
-  return {
-    props: {
-      serverData,
-    },
-  };
-};
-
 export default AdminDashboard;
